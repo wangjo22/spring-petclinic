@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * PetClinic Spring Boot Application.
@@ -32,4 +33,15 @@ public class PetClinicApplication {
         SpringApplication.run(PetClinicApplication.class, args);
     }
 
+    @Bean
+    public String keesun() {
+        return "keesun";
+    }
 }
+
+/**
+    Bean can be enrolled using Component scanning: @Repository, @Service, @Controller
+    Or it can be done in XML
+    We can enroll bean using @Bean annotation in the function under @Configuration annotation
+    @SpringBootApplication annotation contains @Configuration
+ **/
